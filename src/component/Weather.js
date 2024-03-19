@@ -2,20 +2,20 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import AirIcon from "@mui/icons-material/Air";
 import WaterIcon from "@mui/icons-material/Water";
 
-const Weather = () => {
+const Weather = ({ city, actualData }) => {
   return (
     <div className="weather-display-container">
       <div className="weather-display-grid">
-        <div className="icon">
-          <div>
+        <div className="icon-details-container">
+          <div className="icon">
             <WbSunnyIcon
               sx={{
-                fontSize: 150,
+                fontSize: 100,
               }}
             />
           </div>
-          <div> 32 degrees</div>
-          <div>location</div>
+          <h1> {actualData.current.temp}</h1>
+          <h2>{city}</h2>
         </div>
         <div className="humid-container">
           <div className="humid-icon">
@@ -26,8 +26,10 @@ const Weather = () => {
             />
           </div>
           <div className="humid-details">
-            <div>70%</div>
-            <div>humidity</div>
+            <div>
+              <div>{actualData.current.humidity}</div>
+              <div>humidity</div>
+            </div>
           </div>
         </div>
         <div className="windspeed-container">
@@ -39,8 +41,10 @@ const Weather = () => {
             />
           </div>
           <div className="windspeed-details">
-            <div>5.14 km/h</div>
-            <div>windspeed</div>
+            <div>
+              <div>{actualData.current.wind_speed}</div>
+              <div>windspeed</div>
+            </div>
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@
   width: 100%;
 }
 
-.icon{
+.icon-details-container{
   grid-row-start: 1;
   grid-row-end:4;
   grid-column-start:1;
@@ -44,37 +44,59 @@
   margin: auto;
 }
 
+.icon{
+  display: flex;
+  justify-content: center;
+}
+
 .humid-container{
   grid-row-start: 4;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25% ;
-  grid-template-rows: 50% 50%;
+  display: flex;
+  justify-content: center;
+
 }
 
 .humid-icon{
   grid-column-start: 2;
   grid-column-end: 3;
+  display: flex;
+  align-items: center;
 }
 
 .humid-details{
   grid-column-start: 3;
-  grid-column-end: 4;
+  display: flex;
+  align-items: center;
 }
 
 .windspeed-container{
   grid-row-start: 4;
   grid-column-start: 2;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25% ;
-  grid-template-rows: 50% 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .windspeed-icon{
   grid-column-start: 2;
   grid-column-end: 3;
+  display: flex;
+  align-items: center;
 }
 
 .windspeed-details{
   grid-column-start: 3;
-  grid-column-end: 4;
+  display: flex;
+  align-items: center;
+}
+
+
+.input{
+  padding: 7px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+button{
+  border-radius: 10px;
+  cursor: pointer;
 }
