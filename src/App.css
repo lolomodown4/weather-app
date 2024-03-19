@@ -1,4 +1,80 @@
 .App {
   box-sizing: border-box;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.searchbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.component-holder {
+  margin-top: 50px;
+  border: solid 1px black;
+  height: 40vh;
+  width: 40%;
+  padding: 20px;
+}
+
+.weather-display-container{
+  display: flex;
+  justify-content: center;
+  height: 81%;
+}
+
+.weather-display-grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  width: 100%;
+}
+
+.icon{
+  grid-row-start: 1;
+  grid-row-end:4;
+  grid-column-start:1;
+  grid-column-end: 3;
+  margin: auto;
+}
+
+.humid-container{
+  grid-row-start: 4;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25% ;
+  grid-template-rows: 50% 50%;
+}
+
+.humid-icon{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.humid-details{
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.windspeed-container{
+  grid-row-start: 4;
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25% ;
+  grid-template-rows: 50% 50%;
+}
+
+.windspeed-icon{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.windspeed-details{
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
