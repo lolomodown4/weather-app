@@ -1,38 +1,102 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.searchbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.component-holder {
+  margin-top: 50px;
+  border: solid 1px black;
+  height: 40vh;
+  width: 40%;
+  padding: 20px;
+}
+
+.weather-display-container{
+  display: flex;
+  justify-content: center;
+  height: 81%;
+}
+
+.weather-display-grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+  width: 100%;
+}
+
+.icon-details-container{
+  grid-row-start: 1;
+  grid-row-end:4;
+  grid-column-start:1;
+  grid-column-end: 3;
+  margin: auto;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+}
+
+.humid-container{
+  grid-row-start: 4;
+  display: flex;
+  justify-content: center;
+
+}
+
+.humid-icon{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+}
+
+.humid-details{
+  grid-column-start: 3;
+  display: flex;
+  align-items: center;
+}
+
+.windspeed-container{
+  grid-row-start: 4;
+  grid-column-start: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.windspeed-icon{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  align-items: center;
+}
+
+.windspeed-details{
+  grid-column-start: 3;
+  display: flex;
+  align-items: center;
+}
+
+
+.input{
+  padding: 7px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+button{
+  border-radius: 10px;
+  cursor: pointer;
 }
